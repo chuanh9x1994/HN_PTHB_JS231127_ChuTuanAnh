@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài kiểm tra Module 1</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="thongTinHV">
+        <h1 class="tthv">Thông tin học viên</h1>
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" placeholder="vui lòng nhập tên" required class="input"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="vui lòng nhập email" class="input"><br><br>
+
+        <label for="phone">Số điện thoại:</label>
+        <input type="number" id="phone" placeholder="vui lòng nhập sđt" class="input"><br><br>
+
+        <label for="address">Quê quán:</label>
+        <input type="text" id="address" placeholder="vui lòng nhập địa chỉ" required class="input"><br><br>
+
+        <label>Giới tính:</label>
+        <input type="radio" id="Nam" value="Nam" name="gender" checked class="inputradio1">
+        <label class="nam">Nam</label>
+        <input type="radio" id="Nu" value="Nữ" name="gender" class="inputradio2">
+        <label class="nu">Nữ</label><br><br>
+
+        <button onclick="addDs()" class="luulai">Lưu lại</button>
+    </div>
+
+    <div class="danhSachHV">
+        <div>
+            <h1 class="tieuDe">Danh sách học viên</h1>
+        </div>
+        <div class="search">
+            <label for="search">Tìm kiếm tên học viên: </label>
+            <!--  oninput để khi tìm kiếm đánh ký tự đến đâu sẽ search đến đó. -->
+            <input type="text" name="" id="search" oninput="search2()">
+            <button onclick="search2()" class="btnSearch">search</button>
+        </div>
+
+        <div class="table">
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="th1">#</th>
+                        <th class="th2">Họ tên</th>
+                        <th class="th3">Email</th>
+                        <th class="th4">Điện thoại</th>
+                        <th class="th5">Địa chỉ</th>
+                        <th class="th6">Gender</th>
+                        <th class="th7">Hành động</th>
+                        <th><button onclick="sapXep()">Sắp xếp (alpha b)</button></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="/function.js"></script>
+</body>
+
+</html>
